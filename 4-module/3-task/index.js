@@ -18,8 +18,8 @@ function highlight(table) {
       row.classList.add('available');
     } else if (isAvailable === 'false') {
       row.classList.add('unavailable');
-    } else if (isAvailable === null) {
-      row.hidden = false;
+    } else if (isAvailable === undefined) {
+      row.hidden = true;
     }
 
     if (genderValue === 'm') {
@@ -29,7 +29,7 @@ function highlight(table) {
     }
 
     if (ageValue < 18) {
-      ageCell.style.textDecoration = "line-through";
+      row.style.textDecoration = "line-through";
     }
   }
 }
