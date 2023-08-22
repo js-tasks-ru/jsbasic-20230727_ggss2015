@@ -1,3 +1,8 @@
+const hideButton = document.querySelector('.hide-self-button');
 function hideSelf() {
-  // ваш код...
+  hideButton.addEventListener('click', () => {
+    hideButton.hidden = true;
+  })
+
 }
+
